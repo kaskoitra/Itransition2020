@@ -14,7 +14,7 @@ public class AuthenticationServiceImpl implements AuthenticationService
     private UserService userService;
 
     @Override
-    public User chekUser(String email, String password) {
+    public User checkUser(String email, String password) {
         return userService.receiveUser(email, password);
     }
 }

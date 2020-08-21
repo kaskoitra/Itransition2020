@@ -58,8 +58,7 @@ public class UserDAO {
             user = (User) usersList.get(0);
             PasswordService ps = new PasswordService();
             String securityPassword = ps.generateSecurePassword(password, user.getRole().getSalt());
-            if(securityPassword.equals(user.getPassword()))
-            {
+            if(securityPassword.equals(user.getPassword())) {
                 return user;
             }
 
