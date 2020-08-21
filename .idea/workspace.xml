@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="unnamed archive" />
+      <artifact name="spring3-mvc-maven-xml-hello-world:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c36657-9873-45e7-a253-23cad1d273e0" name="Default Changelist" comment="My first commit">
+    <list default="true" id="d3c36657-9873-45e7-a253-23cad1d273e0" name="Default Changelist" comment="" />
+    <list id="d7c4122a-0a32-4fcc-85fb-5cff2297ba72" name="Git ignore" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,25 +76,104 @@
     <showSummaryInToolwindow>true</showSummaryInToolwindow>
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controllers/userControllers/UserRegistrationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="75">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <element signature="e#724#725#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controllers/HomePageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/dao/UserDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/dto/Role.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding>
+                <element signature="e#167#168#0" expanded="true" />
+                <element signature="e#192#193#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/filters/AuthenticationFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/filters/LoginServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/filters/LogoutServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/AuthenticationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/implementations/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+            <state relative-caret-position="464">
+              <caret line="57" column="1" lean-forward="true" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -103,6 +182,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Development" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -110,6 +194,10 @@
         <option value="$PROJECT_DIR$/.idea/compiler.xml" />
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/controllers/userControllers/UserLoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/dao/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/services/AuthenticationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/services/UserService.java" />
       </list>
     </option>
   </component>
@@ -139,7 +227,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,6 +244,86 @@
               <item name="Itransition2020" type="bbb3b172:PsiDirectoryNodeWrapper" />
               <item name="src" type="bbb3b172:PsiDirectoryNodeWrapper" />
               <item name="main" type="bbb3b172:PsiDirectoryNodeWrapper" />
+            </path>
+            <path>
+              <item name="Itransition2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Itransition2020" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="src" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="main" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="java" type="bbb3b172:PsiDirectoryNodeWrapper" />
+            </path>
+            <path>
+              <item name="Itransition2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Itransition2020" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="src" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="main" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="java" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="example" type="bbb3b172:PsiDirectoryNodeWrapper" />
+            </path>
+            <path>
+              <item name="Itransition2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Itransition2020" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="src" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="main" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="java" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="example" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="controllers" type="bbb3b172:PsiDirectoryNodeWrapper" />
+            </path>
+            <path>
+              <item name="Itransition2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Itransition2020" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="src" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="main" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="java" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="example" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="controllers" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="userControllers" type="bbb3b172:PsiDirectoryNodeWrapper" />
+            </path>
+            <path>
+              <item name="Itransition2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Itransition2020" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="src" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="main" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="java" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="example" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="dao" type="bbb3b172:PsiDirectoryNodeWrapper" />
+            </path>
+            <path>
+              <item name="Itransition2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Itransition2020" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="src" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="main" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="java" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="example" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="dto" type="bbb3b172:PsiDirectoryNodeWrapper" />
+            </path>
+            <path>
+              <item name="Itransition2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Itransition2020" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="src" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="main" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="java" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="example" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="filters" type="bbb3b172:PsiDirectoryNodeWrapper" />
+            </path>
+            <path>
+              <item name="Itransition2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Itransition2020" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="src" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="main" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="java" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="example" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="services" type="bbb3b172:PsiDirectoryNodeWrapper" />
+            </path>
+            <path>
+              <item name="Itransition2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Itransition2020" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="src" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="main" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="java" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="example" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="services" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="implementations" type="bbb3b172:PsiDirectoryNodeWrapper" />
             </path>
             <path>
               <item name="Itransition2020" type="b2602c69:ProjectViewProjectNode" />
@@ -189,11 +356,22 @@
               <item name="WEB-INF" type="bbb3b172:PsiDirectoryNodeWrapper" />
               <item name="views" type="bbb3b172:PsiDirectoryNodeWrapper" />
             </path>
+            <path>
+              <item name="Itransition2020" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Itransition2020" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="src" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="main" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="webapp" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="WEB-INF" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="views" type="bbb3b172:PsiDirectoryNodeWrapper" />
+              <item name="jsp" type="bbb3b172:PsiDirectoryNodeWrapper" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -333,6 +511,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d3c36657-9873-45e7-a253-23cad1d273e0" name="Default Changelist" comment="" />
+      <changelist id="d7c4122a-0a32-4fcc-85fb-5cff2297ba72" name="Git ignore" comment="" />
       <created>1598012578185</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -340,7 +519,7 @@
       <workItem from="1598012580391" duration="2716000" />
       <workItem from="1598015559544" duration="479000" />
       <workItem from="1598016201093" duration="37000" />
-      <workItem from="1598017060535" duration="816000" />
+      <workItem from="1598017060535" duration="4506000" />
     </task>
     <task id="LOCAL-00001" summary="My first commit">
       <created>1598013767783</created>
@@ -349,11 +528,25 @@
       <option name="project" value="LOCAL" />
       <updated>1598013767783</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Itra-0001: Description added to authentication service methods. Fixed code style.">
+      <created>1598018991734</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598018991734</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Itra-0002: Added a description to the functions in the user service.">
+      <created>1598021660974</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598021660974</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4048000" />
+    <option name="totallyTimeSpent" value="7738000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -368,7 +561,7 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24958494" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24958494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" side_tool="true" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -382,7 +575,7 @@
       <window_info id="Cloverage" order="11" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44924405" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -396,7 +589,7 @@
       <window_info anchor="bottom" id="SonarLint" order="13" weight="0.32937366" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32937366" />
       <window_info anchor="bottom" id="Database Changes" order="15" weight="0.32937366" />
-      <window_info anchor="bottom" id="Version Control" order="16" visible="true" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="16" visible="true" weight="0.32937366" />
       <window_info anchor="bottom" id="JRebel Executor" order="17" />
       <window_info anchor="bottom" id="JRebel Console" order="18" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="19" />
@@ -462,10 +655,52 @@
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
     <MESSAGE value="My first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="My first commit" />
+    <MESSAGE value="Itra-0001: Description added to authentication service methods. Fixed code style." />
+    <MESSAGE value="Itra-0002: Added a description to the functions in the user service." />
+    <option name="LAST_COMMIT_MESSAGE" value="Itra-0002: Added a description to the functions in the user service." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="789" height="362" key="Git.Branch.Popup" />
+    <state width="789" height="362" key="Git.Branch.Popup/1920.1080" />
+    <state width="789" height="362" key="Git.Branch.Popup@1920.1080" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../../ProjectItr/web/WEB-INF/jspPages/adminPages/adminlogin.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controllers/userControllers/TestUserPrivatePageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/HibernateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/implementations/AuthenticationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controllers/userControllers/UserLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -473,10 +708,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        <state relative-caret-position="450">
+          <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controllers/userControllers/UserRegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/controllers/HomePageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/dto/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#167#168#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/filters/AuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/filters/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/filters/LogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/AuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/implementations/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="57" column="1" lean-forward="true" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
         </state>
       </provider>
     </entry>
