@@ -7,8 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("authenticationService")
-public class AuthenticationServiceImpl implements AuthenticationService
-{
+public class AuthenticationServiceImpl implements AuthenticationService {
 
     @Autowired
     private UserService userService;
