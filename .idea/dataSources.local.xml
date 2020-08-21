@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="@vlvlnl1grfzh34vj.chr7pe7iynqr.eu-west-1.rds.amazonaws.com" uuid="2d6ccde8-a866-49ca-9510-9e33c621189b">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>forget</secret-storage>
+    </data-source>
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="ff5dc7fe-0f73-4536-b74f-14ea54eeab45">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>forget</secret-storage>
+    </data-source>
+    <data-source name="persistence/Hibernate" uuid="6d5f6ccd-ae2c-4060-a323-e346305a4c80">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>forget</secret-storage>
+    </data-source>
+  </component>
+</project>
