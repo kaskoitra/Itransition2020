@@ -26,7 +26,7 @@ public class UserLoginController {
 
     @RequestMapping(value = "/loginuser", method = RequestMethod.POST)
     public String userSave(ModelMap model, @RequestParam String email, String password) {
-        authenticationService.chekUser(email, password);
+        authenticationService.checkUser(email, password);
 
         User user = userService.receiveUser(email, password);
         model.addAttribute("name", user.getRole().getTitle());

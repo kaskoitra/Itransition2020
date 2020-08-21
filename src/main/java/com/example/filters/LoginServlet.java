@@ -51,7 +51,7 @@ public class LoginServlet extends HttpServlet {
         throws ServletException, IOException {
         String userID = request.getParameter("email");
         String password = request.getParameter("password");
-        User user = authenticationService.chekUser(userID, password);
+        User user = authenticationService.checkUser(userID, password);
 
         if (user != null) {
             HttpSession session = request.getSession(true);
