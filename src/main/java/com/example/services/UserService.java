@@ -1,30 +1,19 @@
 package com.example.services;
 
-import com.example.dto.User;
+import com.example.entity.User;
+import com.example.dto.UserDto;
+
+import java.util.List;
 
 public interface UserService {
 
-    /**
-     * Saving a new user
-     * @param firstName
-     * @param lastName
-     * @param email
-     * @param password
-     */
-    void saveUser(String firstName, String lastName, String email, String password);
+    User save(UserDto user);
 
-    /**
-     * Search for a user by his ID
-     * @param id User's id
-     * @return User with this id
-     */
-    User receiveUser(long id);
+    List<User> findAll();
 
-    /**
-     * User authentication
-     * @param email User's email
-     * @param password User's password
-     * @return User if credentials are valid
-     */
-    User receiveUser(String email, String password);
+    void delete(long id);
+
+    User findOne(String username);
+
+    User findById(Long id);
 }
