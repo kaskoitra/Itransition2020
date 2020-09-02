@@ -6,11 +6,11 @@
       <secret-storage>forget</secret-storage>
     </data-source>
     <data-source name="hibernate.cfg.xml/Hibernate" uuid="ff5dc7fe-0f73-4536-b74f-14ea54eeab45">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
       <secret-storage>forget</secret-storage>
     </data-source>
     <data-source name="persistence/Hibernate" uuid="6d5f6ccd-ae2c-4060-a323-e346305a4c80">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
       <secret-storage>forget</secret-storage>
     </data-source>
   </component>

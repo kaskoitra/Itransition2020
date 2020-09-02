@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="spring3-mvc-maven-xml-hello-world-1.0-SNAPSHOT.war">
+    <root id="archive" name="Itransition2020-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="spring3-mvc-maven-xml-hello-world:war exploded" />
     </root>
   </artifact>
