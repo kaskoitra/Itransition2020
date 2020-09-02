@@ -1,58 +1,72 @@
 package com.example.services.implementations;
 
-import com.example.dao.UserDAO;
-import com.example.dto.Role;
-import com.example.dto.User;
-import com.example.services.PasswordService;
+import com.example.dao.UserDao;
+import com.example.entity.User;
+import com.example.dto.UserDto;
 import com.example.services.UserService;
-import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-@Service("userService")
-public class UserServiceImpl implements UserService {
+import static java.util.Objects.isNull;
 
-    @Override
-    public void saveUser(String firstName, String lastName, String email, String password) {
-        User user = new User();
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
-        user.setEmail(email);
+@Service(value = "userService")
+public class UserServiceImpl implements UserDetailsService, UserService {
 
-        PasswordService ps = new PasswordService();
-        String salt = generateRandomString();
-        user.setPassword(ps.generateSecurePassword(password, salt));
+    @Autowired
+    private UserDao userDao;
 
-        Role role = new Role();
-        role.setTitle("User");
-        role.setSalt(salt);
+    @Autowired
+    private BCryptPasswordEncoder bcryptEncoder;
 
-        user.setRole(role);
-
-        UserDAO userdao = new UserDAO();
-        userdao.save( user, role);
-    }
-
-    @Override
-    public User receiveUser(long id) {
-        UserDAO userDAO = new UserDAO();
-        return userDAO.receiveUser(id);
-    }
-
-    @Override
-    public User receiveUser(String email, String password) {
-        UserDAO userDAO = new UserDAO();
-        return userDAO.receiveUser(email, password);
-    }
-
-    private String generateRandomString() {
-        char[] text = new char[16];
-        String characters ="ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz1234567890";
-        Random random = new Random();
-        for (int i = 0; i < 16; i++) {
-            text[i] = characters.charAt(random.nextInt(characters.length()));
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userDao.findByUsername(username);
+        if(isNull(user)){
+            throw new UsernameNotFoundException("Invalid username or password.");
         }
-        return new String(text);
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getAuthority());
+    }
+
+    private List getAuthority() {
+        return Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN"));
+    }
+
+    public List<User> findAll() {
+        List<User> list = new ArrayList<>();
+        userDao.findAll().iterator().forEachRemaining(list::add);
+        return list;
+    }
+
+    @Override
+    public void delete(long id) {
+        userDao.deleteById(id);
+    }
+
+    @Override
+    public User findOne(String username) {
+        return userDao.findByUsername(username);
+    }
+
+    @Override
+    public User findById(Long id) {
+        return userDao.findById(id).get();
+    }
+
+    @Override
+    public User save(UserDto user) {
+        User newUser = new User();
+        newUser.setUsername(user.getUsername());
+        newUser.setPassword(bcryptEncoder.encode(user.getPassword()));
+        newUser.setAge(user.getAge());
+        newUser.setSalary(user.getSalary());
+        return userDao.save(newUser);
     }
 }
