@@ -1,13 +1,16 @@
 package com.example.entity;
 
-import javax.persistence.*;
+import javax.persistence.Access;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import static javax.persistence.AccessType.FIELD;
 
 @Entity
 @Table(name="content")
-@Access(AccessType.FIELD)
+@Access(FIELD)
 public class Notes extends ParentEntity {
-
-    private static final long serialVersionUID = 4541815928732870812L;
 
     @Column(name = "tag", nullable = false, length = 255)
     private String tag;

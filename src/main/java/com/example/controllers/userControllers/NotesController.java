@@ -14,8 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 import javax.annotation.Resource;
 import javax.persistence.Lob;
+
+import static java.util.Objects.isNull;
+
+/**
+ *Controller for to save, change and delete notes
+ */
 
 @RestController
 public class NotesController {
@@ -27,7 +34,8 @@ public class NotesController {
 
     @Lob
     @RequestMapping(value="/saveNotes", method = RequestMethod.POST)
-    public RestResponseDto saveNotes(@RequestBody String notesJson) throws IOException, JsonParseException {
+    public RestResponseDto saveNotes(@RequestBody final String notesJson) throws IOException,
+        JsonParseException {
         this.mapper = new ObjectMapper();
         Notes notes = this.mapper.readValue(notesJson, Notes.class);
         if(!this.validate(notes)){
@@ -43,10 +51,10 @@ public class NotesController {
     }
 
     @RequestMapping(value = "/deleteNotes", method = RequestMethod.POST)
-    public void deleteNotes(@RequestBody String notesJson) throws Exception {
+    public void deleteNotes(@RequestBody final String notesJson) throws Exception {
         this.mapper = new ObjectMapper();
         Notes notes = this.mapper.readValue(notesJson, Notes.class);
-        if (notes.getId() == null) {
+        if (isNull(notes.getId())) {
             throw new Exception("Id is not found!");
         }
         this.notesService.deleteNotes(notes.getId());
@@ -54,10 +62,10 @@ public class NotesController {
 
     private boolean validate (Notes notes) {
         boolean isValid = true;
-        if (StringUtils.trimToNull(notes.getTag()) == null) {
+        if (isNull(StringUtils.trimToNull(notes.getTag()))) {
             isValid = false;
         }
-        if (StringUtils.trimToNull(notes.getContent()) == null) {
+        if (isNull(StringUtils.trimToNull(notes.getContent()))) {
             isValid = false;
         }
         return isValid;

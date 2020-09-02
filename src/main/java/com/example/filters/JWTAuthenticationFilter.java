@@ -1,9 +1,9 @@
 package com.example.filters;
 
 import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.SignatureException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
@@ -14,10 +14,10 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import io.jsonwebtoken.SignatureException;
 
-import static com.example.ItransitionConstants.HEADER_STRING;
-import static com.example.ItransitionConstants.TOKEN_PREFIX;
+import static com.example.ItransitionTokenConstants.HEADER_STRING;
+import static com.example.ItransitionTokenConstants.TOKEN_PREFIX;
+import static org.springframework.security.core.context.SecurityContextHolder.getContext;
 
 public class JWTAuthenticationFilter extends OncePerRequestFilter {
 
@@ -46,15 +46,14 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
         } else {
             logger.warn("couldn't find bearer string, will ignore the header");
         }
-        if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+        if (username != null && getContext().getAuthentication() == null) {
 
             UserDetails userDetails = userService.loadUserByUsername(username);
-
             if (jwtTokenUtil.validateToken(authToken, userDetails)) {
-                UsernamePasswordAuthenticationToken authentication = jwtTokenUtil.getAuthentication(authToken, SecurityContextHolder.getContext().getAuthentication(), userDetails);
+                UsernamePasswordAuthenticationToken authentication = jwtTokenUtil.getAuthentication(authToken, getContext().getAuthentication(), userDetails);
                 authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(req));
                 logger.info("authenticated user " + username + ", setting security context");
-                SecurityContextHolder.getContext().setAuthentication(authentication);
+                getContext().setAuthentication(authentication);
             }
         }
         chain.doFilter(req, res);

@@ -15,6 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import javax.annotation.Resource;
 
+/**
+ *Controller for to get, save and delete users
+ */
+
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 public class UserController {
@@ -22,6 +26,11 @@ public class UserController {
     @Resource
     private UserService userService;
 
+    /**
+     *Private controller for get all users
+     *
+     * @return List<User> all users in the DB
+     */
     @Secured({"ROLE_ADMIN", "ROLE_USER"})
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     @RequestMapping(value="/users", method = RequestMethod.GET)
@@ -29,18 +38,34 @@ public class UserController {
         return userService.findAll();
     }
 
-    @Secured("ROLE_USER")
+    /**
+     *Private controller for get user
+     *
+     * @return User user by id
+     */
+    @Secured({"ROLE_ADMIN", "ROLE_USER"})
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     @RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
     public User getUserById(@PathVariable(value = "id") Long id){
         return userService.findById(id);
     }
 
+    /**
+     *Public controller for get user
+     *
+     * @return User user by username
+     */
     @RequestMapping(value="/{username}", method = RequestMethod.GET)
     public User getUserByUserName(@PathVariable(value = "username") String username){
         return userService.findOne(username);
     }
 
+
+    /**
+     *Public controller for save user
+     *
+     * @return User saved user
+     */
     @RequestMapping(value="/signup", method = RequestMethod.POST)
     public User saveUser(@RequestBody UserDto user){
         return userService.save(user);

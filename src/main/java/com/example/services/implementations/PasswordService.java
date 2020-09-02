@@ -1,5 +1,7 @@
 package com.example.services.implementations;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -27,12 +29,6 @@ public class PasswordService {
     }
 
     private String generateRandomString() {
-        char[] text = new char[16];
-        String characters ="ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz1234567890";
-        Random random = new Random();
-        for (int i = 0; i < 16; i++) {
-            text[i] = characters.charAt(random.nextInt(characters.length()));
-        }
-        return new String(text);
+        return RandomStringUtils.random(16, true, true);
     }
 }

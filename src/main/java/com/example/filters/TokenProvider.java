@@ -15,9 +15,12 @@ import java.util.Date;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static com.example.ItransitionConstants.ACCESS_TOKEN_VALIDITY_SECONDS;
-import static com.example.ItransitionConstants.AUTHORITIES_KEY;
-import static com.example.ItransitionConstants.SIGNING_KEY;
+import static com.example.ItransitionTokenConstants.ACCESS_TOKEN_VALIDITY_SECONDS;
+import static com.example.ItransitionTokenConstants.AUTHORITIES_KEY;
+import static com.example.ItransitionTokenConstants.SIGNING_KEY;
+import static io.jsonwebtoken.SignatureAlgorithm.HS256;
+import static java.lang.System.currentTimeMillis;
+import static java.util.stream.Collectors.toList;
 
 @Component
 public class TokenProvider implements Serializable {
@@ -54,9 +57,9 @@ public class TokenProvider implements Serializable {
         return Jwts.builder()
             .setSubject(authentication.getName())
             .claim(AUTHORITIES_KEY, authorities)
-            .signWith(SignatureAlgorithm.HS256, SIGNING_KEY)
-            .setIssuedAt(new Date(System.currentTimeMillis()))
-            .setExpiration(new Date(System.currentTimeMillis() + ACCESS_TOKEN_VALIDITY_SECONDS*1000))
+            .signWith(HS256, SIGNING_KEY)
+            .setIssuedAt(new Date(currentTimeMillis()))
+            .setExpiration(new Date(currentTimeMillis() + ACCESS_TOKEN_VALIDITY_SECONDS*1000))
             .compact();
     }
 
@@ -78,7 +81,7 @@ public class TokenProvider implements Serializable {
         final Collection<? extends GrantedAuthority> authorities =
             Arrays.stream(claims.get(AUTHORITIES_KEY).toString().split(","))
                 .map(SimpleGrantedAuthority::new)
-                .collect(Collectors.toList());
+                .collect(toList());
 
         return new UsernamePasswordAuthenticationToken(userDetails, "", authorities);
     }
