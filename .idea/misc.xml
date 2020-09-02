@@ -11,7 +11,7 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/classes" />
+    <output url="file://$PROJECT_DIR$" />
   </component>
   <component name="jetbrains.communicator.idea.IdProvider" IDEtalkID="DCE06D9085C79EAE61882642FEF66F38" />
 </project>
