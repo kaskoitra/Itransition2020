@@ -1,0 +1,32 @@
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#  Pre push file - for Itransition2020
+#
+#  Needed to avoid bugs getting into
+#master and Development branches.
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+name: Itransition2020
+
+on:
+  push:
+    branches:
+      - master
+      - Development
+    pul_reqests:
+      - master
+      - Development
+
+jobs:
+  prepush:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run all tests
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+        architecture: x64
+    - name: Build with Maven
+      run: mvn test --file pom.xml
+
+
+
