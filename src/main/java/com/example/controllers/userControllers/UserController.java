@@ -70,4 +70,16 @@ public class UserController {
     public User saveUser(@RequestBody UserDto user){
         return userService.save(user);
     }
+
+    /**
+     *Public controller for delete user
+     *
+     * @param id user's Id for deleting
+     * @return boolean is user deleted
+     */
+    @RequestMapping(value="/users/{id}", method = RequestMethod.DELETE)
+    public boolean deleteUser(@PathVariable(value = "id") long id){
+        userService.delete(id);
+        return true;
+    }
 }
