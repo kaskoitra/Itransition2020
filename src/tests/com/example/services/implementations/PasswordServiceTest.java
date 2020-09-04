@@ -8,8 +8,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.regex.Pattern;
 
-import static org.mockito.ArgumentMatchers.notNull;
-
 @RunWith(MockitoJUnitRunner.class)
 public class PasswordServiceTest {
 
@@ -21,6 +19,7 @@ public class PasswordServiceTest {
     @Test
     public void  generateSecurePassword(){
         String result = passwordService.generateSecurePassword(PASSWORD);
+        System.out.println("Test message: Git actions work success!");
         Assert.assertTrue(Pattern.matches("[a-z0-9]+", result));
     }
 
