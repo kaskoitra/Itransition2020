@@ -30,7 +30,7 @@ jobs:
         java-version: 11
     - name: Build with Maven
       run: mvn -B test --file pom.xml
-    - uses: ashley-taylor/junit-report-annotations-action@master
+    - uses: kaskoitra/Itransition2020@Development
       with:
         access-token: ${{ secrets.GITHUB_TOKEN }}
       if: always()
