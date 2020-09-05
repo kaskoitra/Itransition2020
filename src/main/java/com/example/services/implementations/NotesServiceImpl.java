@@ -28,5 +28,4 @@ public class NotesServiceImpl implements NotesService {
     public void deleteNotes(Long id) {
         this.notesDao.deleteById(id);
     }
-
 }

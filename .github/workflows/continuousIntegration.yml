@@ -1,0 +1,34 @@
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#  Pre push file - for Itransition2020
+#
+#  Needed to avoid bugs getting into
+#master and Development branches.
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+name: Itransition2020
+
+on:
+  push:
+    branches:
+      - master
+      - Development
+  pull_request:
+    branches:
+      - master
+      - Development
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+      - name: Run tests with Maven
+        run: mvn -B test --file pom.xml
+        - uses: kaskoitra/Itransition2020@Development
+            with:
+              access-token: ${{ secrets.GITHUB_TOKEN }}
+            if: always()
+     
+
+
+
