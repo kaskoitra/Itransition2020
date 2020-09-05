@@ -3,18 +3,16 @@ package com.example.services.implementations;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.junit.runners.JUnit4;
 
 import java.util.regex.Pattern;
 
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(JUnit4.class)
 public class PasswordServiceTest {
 
     private static final String PASSWORD = "qwerty";
 
-    @InjectMocks
-    private PasswordService passwordService;
+    private PasswordService passwordService = new PasswordService();
 
     @Test
     public void  generateSecurePassword(){
