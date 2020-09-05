@@ -22,5 +22,4 @@ public class PasswordServiceTest {
         System.out.println("Test message: Git actions work success!");
         Assert.assertTrue(Pattern.matches("[a-z0-9]+", result));
     }
-
 }
